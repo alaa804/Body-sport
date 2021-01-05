@@ -1,14 +1,15 @@
-const User = require('../models/User');
+
 
 
 
 
 
 const register = async(req , res) => {
+    const { name , lastName , email , password } = req.body;
     try {
-
-    } catch() {
-
+     res.send({ user : { name , lastName , email , password }})
+    } catch(error) {
+     console.log(error)
     }
 }
 

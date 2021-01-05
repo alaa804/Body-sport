@@ -2,17 +2,19 @@ const express = require("express");
 
 const app = express();
 
-const authRouter = require("./routes/authRouter")
+// const authRouter = require("./routes/authRouter")
 
 const connectDB = require("./config/connectDB");
 
+// MIDDILWARE
+app.use(express.json());
 
 // CONNECT THE DATABASE..
 connectDB();
 
 
-//GLOBAL MIDDILWARE
-app.use("/api/auth" , authRouter)
+//GLOBAL ROUTER MIDDILWARE
+app.use("/api/auth" , require("./routes/authRouter"))
 
 
 // START THE LOCALHOST SERVER ..
