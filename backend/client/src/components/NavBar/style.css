@@ -1,0 +1,79 @@
+.navbar {
+    box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    color: white;
+    background: #262626;
+    display: flex;
+    
+}
+
+
+
+li{
+    margin-left: 30px;
+    
+}
+
+.navMenu{  
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+    list-style: none;
+    margin-top: 39px;
+    
+}
+
+.navMenu :hover{
+    color: rgba(255, 81, 0, 0.966); 
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+
+img{
+    margin-left: 30px;
+    margin-top: 0;
+    width: 200px;
+    height: 65px;
+}
+
+
+.signeUp{
+    display: flex;
+    padding-left: 250px;
+    
+}
+
+.menu{
+    list-style: none;
+    color:  rgba(255, 81, 0, 0.966);
+    margin-top: 30px;
+    width: 100px;
+    
+}
+
+
+.Login{
+    margin-left: -40px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.menu :hover{
+    color: rgb(243, 109, 75);
+    cursor: pointer;
+}
+
+.shop{
+    width: 100px;
+    margin-top: -16px;
+    margin-bottom: -16px;
+    background-color: rgba(255, 81, 0, 0.966);
+    border: none;
+    
+}
+
+.shopping{
+    font-size:30px;
+    margin-top: 5px;
+    
+}
