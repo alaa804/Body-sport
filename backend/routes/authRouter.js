@@ -11,6 +11,7 @@
 
 
 
+
  router.post("/register",registerRules(),validator, register)
 
  module.exports = router;

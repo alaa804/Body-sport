@@ -1,3 +1,4 @@
+
  
  const bcrypt = require("bcrypt");
  const jwt = require("jsonwebtoken");
@@ -6,7 +7,11 @@
 const User = require('../models/User');
 
 
+
+
+
 const register = async(req , res) => {
+
     const {name , lastName , email, password } = req.body;
     try {
         let user = await User.findOne({email});
@@ -24,6 +29,7 @@ user.password =  await bcrypt.hash( password , salt );
 
 // //4- save the user
 await user.save()
+
 
 // //5- login the user(token)
 const payload = {
