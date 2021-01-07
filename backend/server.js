@@ -16,10 +16,10 @@ const app = express();
 
 
 //middlewares
-app.use(express.json())
+ app.use(express.json());
 app.use("/api/auth" , logger);
 // CONNECT THE DATABASE..
- connectDB();
+     connectDB();
 
 
 

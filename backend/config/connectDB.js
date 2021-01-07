@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-require("dotenv").config({ path : "./config/.env"})
+ const mongoose = require("mongoose");
+ require("dotenv").config({ path : "./config/.env"})
 
-const connectDB = async() => {
+ const connectDB = async() => {
 
  const options = {
    useNewUrlParser: true ,
