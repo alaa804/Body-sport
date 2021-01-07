@@ -47,6 +47,7 @@ res.send({
     _id : user._id,
 },
 });
+
    } catch(error) {
        console.log(error);
    }
@@ -54,7 +55,48 @@ res.send({
 
 
 
+const login = async(req , res) => {
+    const { email , password } = req.body
+      
+     try {
+      let user = await User.findOne({ email });
+       // 1-  check if the user exist
+       if(!user){
+        return res.status(400).send([{ msg : "bad credentials (email)" }])
+      }
+      // 2- compare the password
+       const isMatch = await bcrypt.compare(password , user.password );
+       if(!isMatch) {
+        return res.status(400).send([{ msg : "bad credentials (password)" }])
+       }
+      // 3- sign in the user { give a token }
+      const payload = {
+        userID : user._id,
+      };
+  
+     const token = jwt.sign( payload , process.env.SECRET);  
+       
+     res.send({ token ,
+         user : { 
+      name : user.name , 
+      lastName : user.lastName , 
+      email : user.email ,
+      _id : user._id ,
+     } ,
+   });
+        
+     } catch(error) {
+         console.log(error);
+     };
+  }
+
+
+  const getAuthUser =(req , res) => {
+      res.send({ user : req.user});
+  }
 
  module.exports = {
      register,
+     login,
+     getAuthUser,
  };
