@@ -6,6 +6,7 @@
  const options = {
    useNewUrlParser: true ,
     useUnifiedTopology: true,
+    useFindAndModify : false ,
     };
 
    try {

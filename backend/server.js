@@ -1,7 +1,15 @@
 const express = require("express");
+
+
 const app = express();
 
 
+// const authRouter = require("./routes/authRouter")
+
+
+
+
+ const productRouter = require("./routes/ProductRouter")
  const authRouter = require("./routes/authRouter");
  const connectDB = require("./config/connectDB");
  const logger = require("./middlewares/logger");
@@ -15,11 +23,17 @@ app.use("/api/auth" , logger);
 
 
 
+
 //GLOBAL MIDDILWARE
  app.use("/api/auth" , authRouter)
+ app.use("/api" , productRouter)
+ 
 
 //start the server
 const PORT = process.env.PORT ||  5000 ;
+
+
+
 app.listen(PORT , (err) =>
 err
 ? console.error(err)
