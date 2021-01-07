@@ -1,12 +1,17 @@
-const express = require("express");
-const router = express.Router();
+ const express = require("express");
+ const router = express.Router();
 
-const { register } = require("../controllers/authController")
+ const {register} = require("../controllers/authController")
+ const {registerRules , validator} = require("../middlewares/bodyValidator")
 
 
-// POST : /api/register
-// DESCRIPTION : REGISTER THE USER 
-// ACCESS : PUBLIC
-router.post('/register' , register)
 
-module.exports = router  
+
+
+
+
+
+
+ router.post("/register",registerRules(),validator, register)
+
+ module.exports = router;

@@ -3,25 +3,48 @@ const express = require("express");
 
 const app = express();
 
-const ProductRouter = require("./routes/ProductRouter")
+
 // const authRouter = require("./routes/authRouter")
 
-const connectDB = require("./config/connectDB");
 
-// MIDDILWARE
-app.use(express.json());
 
+
+ const productRouter = require("./routes/ProductRouter")
+ const authRouter = require("./routes/authRouter");
+ const connectDB = require("./config/connectDB");
+ const logger = require("./middlewares/logger");
+
+
+//middlewares
+app.use(express.json())
+app.use("/api/auth" , logger);
 // CONNECT THE DATABASE..
-connectDB();
+ connectDB();
 
 
-//GLOBAL ROUTER MIDDILWARE
-app.use("/api/auth" , require("./routes/authRouter"))
 
-app.use("/api" , ProductRouter)
 
-// START THE LOCALHOST SERVER ..
+//GLOBAL MIDDILWARE
+ app.use("/api/auth" , authRouter)
+ app.use("/api" , productRouter)
+ 
 
+//start the server
 const PORT = process.env.PORT ||  5000 ;
-app.listen(PORT , (err) => err ? console.error(err)
-: console.log(`THE SERVER IS RUNNING ON HTTP://LOCALHOST:${PORT}`))
+
+
+
+app.listen(PORT , (err) =>
+err
+? console.error(err)
+: console.log(`THE SERVER IS RUNNING ON PORT ${PORT}...`)
+);
+
+
+
+
+
+
+
+
+
