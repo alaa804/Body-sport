@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+.paragraphe{
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.5;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.background{
+    background-color:rgba(223, 90, 29, 0.966);
+}
+
+
+.body1{
+    align-content: center;
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    margin: 0 auto;
+    min-height: 90vh;
+    width: 85vw;
+    
+
+}
+
+.imageAboutUs{
+    background: url("about.jpg") center/cover no-repeat;
+    
+}
+
+.content2{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content2 h1{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    color: rgba(223, 90, 29, 0.966);
+    font-family: 'Pacifico', cursive;
+
+    
+}
+.line{
+    width: 70px;
+    height: 5px;
+    margin-left: 1px;
+    
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 0.5px solid #777;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.links li a{
+    text-transform: uppercase;
+    color: rgba(223, 90, 29, 0.966);
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: rgba(223, 90, 29, 0.966);
+}
+.links li:hover a{
+    color :rgba(223, 90, 29, 0.966);
+}
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: #777;
+    margin: 0 auto;
+}
+
+.icons1{
+    display: flex;
+    padding: 15px 0;
+    color:rgba(223, 90, 29, 0.966);
+}
+.icons1 li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+.icons1 li i{
+    font-size: 26px;
+    opacity: 0.8;
+}
+.icons1 li i:hover{
+    color: rgba(78, 226, 85, 0.966);
+}
+
+
