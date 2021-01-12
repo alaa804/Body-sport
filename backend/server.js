@@ -1,7 +1,10 @@
 const express = require("express");
-
-
+const fileUpload = require('express-fileupload')
 const app = express();
+
+
+
+
 
 
 // const authRouter = require("./routes/authRouter")
@@ -13,11 +16,18 @@ const app = express();
  const authRouter = require("./routes/authRouter");
  const connectDB = require("./config/connectDB");
  const logger = require("./middlewares/logger");
+ const upload = require("./routes/upload")
 
 
 //middlewares
  app.use(express.json());
+ 
 app.use("/api/auth" , logger);
+
+app.use(fileUpload({
+     useTempFiles: true
+}))
+
 // CONNECT THE DATABASE..
      connectDB();
 
@@ -27,6 +37,7 @@ app.use("/api/auth" , logger);
 //GLOBAL MIDDILWARE
  app.use("/api/auth" , authRouter)
  app.use("/api" , productRouter)
+ app.use("/api" , upload)
  
 
 //start the server

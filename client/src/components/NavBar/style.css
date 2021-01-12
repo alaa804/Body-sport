@@ -46,15 +46,15 @@ img{
 .menu{
     list-style: none;
     color:  rgba(255, 81, 0, 0.966);
-    margin-top: 30px;
     width: 100px;
     
 }
 
 
 .Login{
-    margin-left: -40px;
-    margin-top: 10px;
+    margin-left: -110px;
+    margin-top: 40px;
+    text-align: center;
     font-size: large;
 }
 
@@ -78,3 +78,8 @@ img{
     
 }
 
+.register{
+    margin-top: -24.7px;
+    margin-left: 20px;
+    font-size: large;
+}
