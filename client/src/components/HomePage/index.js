@@ -1,5 +1,6 @@
 import React from 'react'
-import NavBar from '../NavBar'
+
+
 import Footer from "../Footer/index"
 import slide1 from './images/slide-2.jpg';
 import slide2 from './images/slide-3.jpg';
@@ -18,6 +19,9 @@ import "./style.css"
 import CarosulProducts from './carosul'
 
 
+import NavBar from '../NavBar/index'
+
+
 
 
 function HOME() {
@@ -25,6 +29,7 @@ function HOME() {
     <div>
         
         <NavBar/>
+
         
         
         <Carousel>
@@ -73,6 +78,8 @@ function HOME() {
       src={img2} 
       alt="Second image"
     />
+
+
     </div>
     <div className="cont"> 
       <div className="arrivals">
