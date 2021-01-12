@@ -1,13 +1,48 @@
-import NavBar from './components/NavBar';
-import './App.css';
+import React , {useEffect} from "react"
+import {BrowserRouter as Router , Route , Switch} from "react-router-dom"
+import {useDispatch , useSelector} from "react-redux"
 import HOME from './components/HomePage';
+import Login from "./components/AuthForms/Login";
+import Dashboard from "./components/Dashboard";
+import PrivateRoute from "./components/PrivateRoute";
+import {getAuthUser} from "./JS/actions/authActions"
+import './App.css';
+import Register from "./components/AuthForms/Register";
+import ProductsList from "./components/ProductsList";
+import DetailProduct from "./components/DetailProduct";
+
 
 
 function App() {
+
+  const dispatch = useDispatch()
+  
+  
+  // useEffect(() => {
+  //     dispatch(getAuthUser())
+  // },[dispatch])
+  
+  
+  const isLoading = useSelector((state) => state.authReducer.isLoading)
+  
+  if(isLoading) {
+    return <h1>Loading.....</h1>
+  }
+    
+
+  
   return (
-    <div>
-    <HOME/>
-    </div>
+    <Router>
+    <Switch>
+      <Route exact path="/" component={HOME}/>
+      <Route  path="/login" component = {Login} />
+      <Route  path="/register" component={Register}   />
+      <Route  path="/product" component={ProductsList}   />
+      <Route  path="/detail/:id" component={DetailProduct}   />
+      <PrivateRoute path="/dashboard" component={Dashboard} />
+    </Switch>
+    </Router>
+
   );
 }
 

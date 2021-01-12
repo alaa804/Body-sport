@@ -12,8 +12,8 @@ const Products = (req , res) => {
 // Add product
 
 const addProduct = (req , res) => {
-    const { category , title , price , description , date} = req.body;
-    const newProduct = new products({category , title , price , description , date})
+    const { category , title , price , description , date , images} = req.body;
+    const newProduct = new products({category , title , price , description , date , images})
     newProduct.save()
     .then((product) => res.send({msg : "product Added with success" , product}) )
     .catch((err) => res.send({msg : "ERROR ADD" , err}))
