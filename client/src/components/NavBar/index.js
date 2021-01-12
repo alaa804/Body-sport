@@ -1,6 +1,7 @@
 import React from 'react'
 import "./style.css"
 import Logo from "./logo.png"
+import {Link} from "react-router-dom"
 
 
 
@@ -14,11 +15,23 @@ function NavBar() {
         <ul className="navMenu">
             <li>HOME</li>
             <li>SHOP</li>
-            <li>ABOUT</li>
+            <li><Link to="/about">ABOUT</Link></li>
             <li>MEMBERS</li>
-            <li>CONTACT</li>
+            <li><Link to="/contact">CONTACT </Link> </li> 
         </ul>
         </nav>
+
+
+  
+
+
+  
+  
+
+    
+
+
+
         <div className="signeUp">
             <ul className="menu">
                 <li>

@@ -24,7 +24,7 @@ li{
 }
 
 .navMenu :hover{
-    color: rgba(255, 81, 0, 0.966); 
+    color: rgba(223, 90, 29, 0.966); 
     cursor: pointer;
     transition-duration: 0.8s;
 }
@@ -40,12 +40,13 @@ img{
 .signeUp{
     display: flex;
     margin-left: 173px;
+    margin: 0;
     
 }
 
 .menu{
     list-style: none;
-    color:  rgba(255, 81, 0, 0.966);
+    color:  rgba(223, 90, 29, 0.966);
     margin-top: 30px;
     width: 100px;
     
@@ -67,8 +68,9 @@ img{
     width: 100px;
     margin-top: -16px;
     margin-bottom: -16px;
-    background-color: rgba(255, 81, 0, 0.966);
+    background-color: rgba(223, 90, 29, 0.966);
     border: none;
+    
     
 }
 
