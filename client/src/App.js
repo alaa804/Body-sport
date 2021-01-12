@@ -1,3 +1,11 @@
+
+
+
+
+
+import Conatct from './components/Contact';
+import About from './components/About';
+
 import React , {useEffect} from "react"
 import {BrowserRouter as Router , Route , Switch} from "react-router-dom"
 import {useDispatch , useSelector} from "react-redux"
@@ -10,6 +18,7 @@ import './App.css';
 import Register from "./components/AuthForms/Register";
 import ProductsList from "./components/ProductsList";
 import DetailProduct from "./components/DetailProduct";
+
 
 
 
@@ -32,9 +41,11 @@ function App() {
 
   
   return (
-    <Router>
+    <Router> 
     <Switch>
       <Route exact path="/" component={HOME}/>
+     <Route path = "/contact" component={Conatct} />
+        <Route path = "/about" component={About} />
       <Route  path="/login" component = {Login} />
       <Route  path="/register" component={Register}   />
       <Route  path="/product" component={ProductsList}   />
@@ -43,7 +54,10 @@ function App() {
     </Switch>
     </Router>
 
+
   );
 }
 
 export default App;
+
+    
