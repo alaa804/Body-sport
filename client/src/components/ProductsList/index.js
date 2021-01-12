@@ -3,6 +3,7 @@ import {useSelector , useDispatch} from "react-redux"
 import {getProduct} from "../../JS/actions/productsActions"
 import NavBar from '../NavBar'
 import ProductCard from '../ProductCard'
+import Loading from "../Loading"
 import "./ProductList.css"
 
 const ProductsList = () => {
@@ -22,6 +23,7 @@ const ProductsList = () => {
                 <ProductCard key={product._id} product={product}  />
         ))}
         </div>
+        {products.length === 0 && <Loading/> }
         </React.Fragment>
     )
 }
