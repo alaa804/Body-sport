@@ -27,9 +27,10 @@ function App() {
   const dispatch = useDispatch()
   
   
-  // useEffect(() => {
-  //     dispatch(getAuthUser())
-  // },[dispatch])
+  useEffect(() => {
+      if(localStorage.getItem("token"))
+      dispatch(getAuthUser())
+  },[dispatch])
   
   
   const isLoading = useSelector((state) => state.authReducer.isLoading)

@@ -21,11 +21,14 @@ function Login({ history }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        
+
         // LOGIN USER
         dispatch(login(formData));
         history.push("/dashboard");
         
     }
+    
     if (isAuth) {
         return <Redirect to="/dashboard" />
     }

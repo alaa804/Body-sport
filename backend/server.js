@@ -17,6 +17,7 @@ const app = express();
  const connectDB = require("./config/connectDB");
  const logger = require("./middlewares/logger");
  const upload = require("./routes/upload")
+ const categoryRouter = require("./routes/categoryRouter")
 
 
 //middlewares
@@ -38,6 +39,8 @@ app.use(fileUpload({
  app.use("/api/auth" , authRouter)
  app.use("/api" , productRouter)
  app.use("/api" , upload)
+ app.use("/api" , categoryRouter)
+
  
 
 //start the server
