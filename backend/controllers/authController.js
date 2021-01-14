@@ -10,6 +10,8 @@ const User = require('../models/User');
 
 
 
+
+
 const register = async(req , res) => {
 
     const {name , lastName , email, password } = req.body;
@@ -20,7 +22,7 @@ if (user){
     return res.status(400).json([{msg:  "This User is aleardy exist"}]);
 }
 // //2- create new user
-user = new User({name , lastName , email, password });
+user = new User({name , lastName , email, password  });
 
 // //3- hash the password
 const salt = await bcrypt.genSalt(10);
@@ -29,6 +31,7 @@ user.password =  await bcrypt.hash( password , salt );
 
 // //4- save the user
 await user.save()
+
 
 
 // //5- login the user(token)
@@ -40,7 +43,7 @@ const token = jwt.sign(payload , process.env.SECRET);
 // //6- RESPONSE
 res.send({
     token ,
-     user :{
+    user :{
     name : user.name,
     lastName : user.lastName,
     email : user.email,

@@ -14,6 +14,7 @@ export const getAuthUser = () => async (dispatch) => {
     try {
     const res = await axios.get("/api/auth/me" , config)
     
+    
     dispatch({
         type : GET_AUTH_USER ,
         payload : res.data,
