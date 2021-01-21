@@ -5,7 +5,7 @@ p{
 
 }
 h2,h3{
-    color: #fff;
+    color:white;
 }
 h2{
     font-size: 18px;
@@ -97,6 +97,7 @@ text-transform: uppercase;
     color: #000;
 
 }
+
 @media only screen and (min-width : 786px) and (max-width: 991px){
     .md-mb-30{
         margin-bottom: 30px;

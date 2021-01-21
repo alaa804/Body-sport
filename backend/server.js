@@ -12,12 +12,13 @@ const app = express();
 
 
 
- const productRouter = require("./routes/ProductRouter")
+  const productRouter = require("./routes/ProductRouter")
  const authRouter = require("./routes/authRouter");
  const connectDB = require("./config/connectDB");
  const logger = require("./middlewares/logger");
  const upload = require("./routes/upload")
  const categoryRouter = require("./routes/categoryRouter")
+ const paymentRouter = require("./routes/paymentRouter")
 
 
 //middlewares
@@ -40,6 +41,7 @@ app.use(fileUpload({
  app.use("/api" , productRouter)
  app.use("/api" , upload)
  app.use("/api" , categoryRouter)
+ app.use("/api" , paymentRouter)
 
  
 

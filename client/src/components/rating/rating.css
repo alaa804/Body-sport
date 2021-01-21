@@ -1,0 +1,9 @@
+/* Rating */
+.rating span {
+    color:gold;
+    margin: 0.1rem;
+    font-size: medium;
+  }
+  .rating span:last-child {
+    color: #404040;
+  }

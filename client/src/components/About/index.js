@@ -1,9 +1,12 @@
 import React from 'react'
+import NavBar from '../NavBar'
 import Line from "./line.jpg"
 
 
 const About = () => {
     return (
+        <React.Fragment>
+            <NavBar/>
         <main className="background">
          <section className="body1">
             <div className = "imageAboutUs"></div>
@@ -44,6 +47,7 @@ We foster our athlete’s mindset through a set of behaviors that are at the cor
     
             </section>
             </main>
+            </React.Fragment>
     
     )
 }

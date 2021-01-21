@@ -1,7 +1,7 @@
 .product_card{
     max-width: 300px;
     overflow: hidden;
-    height: 550px;
+    height: 580px;
     padding: 15px;
     box-shadow: 0 0 15px #ddd;
     margin: 10px 0;
@@ -62,6 +62,11 @@
 .btn_view{
     background: rgba(255, 81, 0, 0.966);
     margin-left: 5px;
+}
+
+.btn_buy{
+    background: #555;
+    margin-left: 20px;
 }
 
 

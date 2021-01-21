@@ -17,7 +17,7 @@ li{
 .navMenu{  
     display: flex;
     justify-content: space-around;
-    margin-left: 200px;
+    margin-left: 50px;
     list-style: none;
     margin-top: 39px;
     
@@ -41,14 +41,24 @@ img{
     display: flex;
     margin-left: 173px;
     margin: 0;
+    margin-top: -5px;
     
+}
+
+.signeUp button {
+    margin-top: -10px;
+    background-color: rgba(223, 90, 29, 0.966);
+    color: black;
+    margin-left: 20px;
+    width: 80px;
+    border: none;
 }
 
 .menu{
     list-style: none;
 
     color:  rgba(223, 90, 29, 0.966);
-    margin-top: 30px;
+    margin-top: 20px;
 
     color:  rgba(255, 81, 0, 0.966);
 
@@ -59,7 +69,7 @@ img{
 
 .Login{
     margin-left: -110px;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     font-size: large;
 }

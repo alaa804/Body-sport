@@ -1,0 +1,33 @@
+/* Checkout Steps */
+.checkout-steps > div {
+    border-top: 0.3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  .checkout-steps > div.active {
+    border-top-color: #f08000;
+    color: #f08000;
+  }
+  .titleAddress{
+      color: black;
+      font-size: 30px;
+      align-items: center;
+  }
+  /* Form */
+.form3 {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .form3 > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .form3 label {
+    margin: 1rem 0;
+  }
+  button.primary {
+    background-color: #f0c040;
+  }

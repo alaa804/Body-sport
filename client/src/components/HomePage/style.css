@@ -64,6 +64,7 @@ h3 {
 .bestsellers{
     margin-top: -100px;
     color: white;
+    margin-left: -50px;
 }
 
 .bestsellers h3 {
@@ -80,9 +81,10 @@ h3 {
 }
 
 .item img{
-    height: 100%;
-    width: 100%; 
-    margin-top: 100px;    
+    height:300px;
+  
+   
+    margin-top: 50px;    
 }
 
 .font4{
@@ -106,7 +108,7 @@ h2{
     font-size: 40px;
     font-family: "Barlow Condensed", sans-serif;
 }
-.information img{
+.information1 img{
     height: 30%;
     width: 450px; 
     margin-left: -1px;
@@ -114,7 +116,7 @@ h2{
     
 }
 
-.information{
+.information1{
     display: flex;
 }
 
