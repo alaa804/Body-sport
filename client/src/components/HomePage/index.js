@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import {Link} from "react-router-dom"
 import Footer from "../Footer/index"
 import slide1 from './images/slide-2.jpg';
 import slide2 from './images/slide-3.jpg';
@@ -84,11 +84,11 @@ function HOME() {
     <div className="cont"> 
       <div className="arrivals">
           <h3>SHOP NEW ARRIVALS</h3>
-          <button type="button" class="btn btn-warning">Shop</button>
+          <Link to="/product" > <button type="button" class="btn btn-warning">Shop</button></Link>
           </div>
           <div className="bestsellers">
       <h3>SHOP NEW BESTSELLERS</h3> 
-      <button type="button" class="btn btn-dark">Shop</button>
+      <Link to="/product" ><button type="button" class="btn btn-dark">Shop</button></Link>
       </div>  
       </div>
       <div className="newar">
@@ -102,7 +102,7 @@ function HOME() {
       <CarosulProducts/>
 
 
-<div className="information">
+<div className="information1">
 <img  src={img4} 
       alt="image1"/>
       <img  src={img5} 

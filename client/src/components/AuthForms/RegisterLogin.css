@@ -1,7 +1,9 @@
 .btn-Register{
-    background-color: my-1;
+    background-color: rgba(255, 81, 0, 0.966);
     color: white;
     border: none;
+    margin-left: -20px;
+    margin-top: 0px;
 }
 
 .register-container{
@@ -9,7 +11,7 @@
 }
 
 .register-block{
-    margin-right: 784px;
-    padding-top: 30px;
+    margin-left: -780px;
+    padding-top: 50px;
 }
 

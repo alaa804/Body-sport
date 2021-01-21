@@ -1,12 +1,14 @@
 import React , {useState , useEffect} from 'react'
-import {useParams} from "react-router-dom"
-import {useSelector} from "react-redux"
+import {useParams , Link} from "react-router-dom"
+import {useSelector , useDispatch} from "react-redux"
 import "./detail.css"
 import ProductCard from '../ProductCard'
+import {addCart} from "../../JS/actions/authActions"
 import NavBar from '../NavBar'
 
 
 const DetailProduct = () => {
+    const dispatch = useDispatch()
     const params = useParams()
     const products = useSelector((state) => state.productsReducer.products)
     const [detailProduct , setDetailProduct] = useState([])
@@ -32,6 +34,7 @@ const DetailProduct = () => {
                     </div>
                     <span>$ {detailProduct.price}</span>
                     <p>{detailProduct.description}</p>
+                    
                     
                 </div>
             </div>

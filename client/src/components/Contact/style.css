@@ -214,10 +214,15 @@ textarea.input {
     height: 50px;
     width: 50px;
     margin-top: -30px;
+    margin-left: -10px;
+    
 }
 
 .info p{
-    margin-top: -35px;
+    margin-top: -40px;
+    margin-left: 10px;
+   text-align: justify;
+  
 }
 
 .contact-info {
@@ -239,15 +244,24 @@ textarea.input {
   .information {
     display: flex;
     color: #555;
-    margin: 0.7rem 0;
+   
+  
     align-items: center;
     font-size: 0.95rem;
-    
+    height: 100px;
+width: 100px;
   }
 
+  
+
+ 
+
+  
   .info{
-      margin-top: 60px;
-      margin-left: -8px;
+      margin-top: 30px;
+      margin-left: 10px;
+
+     
   }
 
   .icon {

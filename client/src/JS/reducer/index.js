@@ -4,9 +4,12 @@ import productsReducer from "./productsReducer"
 
 
 
+
 const rootReducer = combineReducers({
     authReducer ,
     productsReducer,
+  
+    
 })
 
 

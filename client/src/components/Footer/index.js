@@ -17,7 +17,7 @@ const Footer = () => {
                         <h3>BODY SPORT</h3>
                         </div>
                         <div className="col-md-3 col-sm-6 col-xs-12 segment-two md-mb-30 sm-sb-30">
-                        <h2>Body Sport</h2>
+                        <h2 className="bodyColor"> Body Sport</h2>
                     <ul>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">SHOP</a></li>

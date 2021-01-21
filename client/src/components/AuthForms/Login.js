@@ -24,7 +24,11 @@ function Login({ history }) {
         
 
         // LOGIN USER
+        
         dispatch(login(formData));
+        
+        
+        
         history.push("/dashboard");
         
     }
@@ -66,7 +70,7 @@ function Login({ history }) {
                                 />
 
                             </Form.Group>
-                            <Button style={{background : "rgba(255, 81, 0, 0.966)"  , color : "white" , border : "none" }} variant="primary" type="submit"> Submit </Button>
+                            <Button style={{background : "rgba(255, 81, 0, 0.966)"  , color : "white" , border : "none"  , marginTop : "1px" , marginLeft : "0px"}} variant="primary" type="submit"> Submit </Button>
                 
                         </Form>
                     </Col>

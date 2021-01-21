@@ -30,6 +30,14 @@ const ProductSchema = new Schema({
     images : {
         type : Object,
         required : true ,
+    },
+    rating : {
+        type : Number,
+        required : true ,
+    },
+    numReviews : {
+        type : Number,
+        required : true ,
     }
 
 })

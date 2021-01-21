@@ -4,11 +4,14 @@ import shape from "./imags/shape.png"
 import location from "./imags/location.png"
 import email from "./imags/email.png"
 import phone from "./imags/phone.png"
+import NavBar from '../NavBar'
 
 
 
 const  Conatct = () => {
     return (
+      <React.Fragment>
+        <NavBar/>
         <div class="container1">
         <span class="big-circle"></span>
         <img src={shape}className="square" alt="" />
@@ -22,7 +25,7 @@ const  Conatct = () => {
           <div class="info">
             <div class="information">
             <img src={location} className="icon" alt="" />
-              <p> rue rbat nabeul, tn 8000</p>
+              <p> Rue,Rbat,Nabeul,tn,8000</p>
             </div>
             <div class="information">
             <img src={email}className="icon" alt="" />
@@ -30,7 +33,7 @@ const  Conatct = () => {
             </div>
             <div class="information">
             <img src={phone} className="icon" alt="" />
-              <p>72-526-874</p>
+              <p>72.526.874</p>
             </div>
           </div>
           <div class="social-media">
@@ -104,6 +107,7 @@ const  Conatct = () => {
     
     </div>
     </div> 
+    /</React.Fragment>
     )
 }
 

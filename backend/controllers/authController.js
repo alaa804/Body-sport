@@ -98,8 +98,14 @@ const login = async(req , res) => {
       res.send({ user : req.user});
   }
 
+
+  
+
+
+
  module.exports = {
      register,
      login,
      getAuthUser,
+     
  };

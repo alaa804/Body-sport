@@ -1,5 +1,5 @@
 const products = require("../models/productModel")
-
+const isAuth = require("../middlewares/isAuth")
 
 //Get products
 
@@ -12,14 +12,16 @@ const Products = (req , res) => {
 // Add product
 
 const addProduct = (req , res) => {
-    const { category , title , price , description , date , images} = req.body;
-    const newProduct = new products({category , title , price , description , date , images})
+    const { category , title , price , description , date , images , rating , numReviews  } = req.body;
+    const newProduct = new products({category , title , price , description , date , images , rating , numReviews })
     newProduct.save()
     .then((product) => res.send({msg : "product Added with success" , product}) )
     .catch((err) => res.send({msg : "ERROR ADD" , err}))
 }
 
-//Edit product
+
+
+ //Edit product
 
 const editProduct = (req , res) => {
     const id = req.params.id
@@ -42,6 +44,6 @@ const removeProduct = (req , res) => {
 module.exports = {
     Products ,
     addProduct ,
-    editProduct ,
     removeProduct ,
+    editProduct
 }

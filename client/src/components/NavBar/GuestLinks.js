@@ -11,11 +11,10 @@ const GuestLinks = () => {
         
         <nav>
         <ul className="navMenu">
-            <li>HOME</li>
-            <li>SHOP</li>
-            <li>ABOUT</li>
-            <li>MEMBERS</li>
-            <li>CONTACT</li>
+            <li><Link style={{color : "inherit" , textDecoration : "inherit"}} to="/">HOME</Link></li>
+            <li> <Link style={{color : "inherit" , textDecoration : "inherit"}} to="/product"> SHOP</Link></li>
+            <li><Link style={{color : "inherit" , textDecoration : "inherit"}} to="/about">ABOUT</Link></li>
+            <li><Link style={{color : "inherit" , textDecoration : "inherit"}} to="/contact">CONTACT</Link></li>
         </ul>
         </nav>
         <div className="signeUp">
